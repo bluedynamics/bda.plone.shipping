@@ -54,15 +54,18 @@ class Shipping(object):
         self.context = context
     
     def calculate(self, items):
+        """Calculate shipping costs.
+        
+        @param items: list returned by 'bda.plone.cart.extractitems()'
+        """
         raise NotImplementedError(u"Abstract ``Shipping`` does not implement "
                                   u"``calculate``")
 
 
 class FlatRate(Shipping):
+    """Abstract flat rate shipping.
+    """
     sid = 'flat_rate'
     label = _('flat_rate', 'Flat Rate')
     available = True
     default = True
-    
-    def calculate(self, items):
-        pass
