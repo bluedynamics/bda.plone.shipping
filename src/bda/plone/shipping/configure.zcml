@@ -7,4 +7,6 @@
   
   <include file="profiles.zcml" />
   
+  <adapter name="flat_rate" factory=".FlatRate" />
+  
 </configure>
