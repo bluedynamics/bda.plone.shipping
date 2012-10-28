@@ -17,5 +17,5 @@ msgstr ""
 #. Default: "Flat Rate"
 #: ./__init__.py:69
 msgid "flat_rate"
-msgstr ""
+msgstr "Forfait"
 
