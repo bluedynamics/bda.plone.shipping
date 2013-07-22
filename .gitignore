@@ -1,5 +1,5 @@
 *.pyc
 *.pyo
 src/bda.plone.shipping.egg-info/
-
+*.mo
 .DS_Store
