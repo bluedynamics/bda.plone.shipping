@@ -35,6 +35,12 @@ setup(name='bda.plone.shipping',
           'setuptools',
           'Plone',
       ],
+      extras_require={
+          'test': [
+              'plone.app.testing',
+              'bda.plone.shipping',
+          ]
+      },
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone
