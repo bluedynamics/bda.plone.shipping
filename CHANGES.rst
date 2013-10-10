@@ -5,7 +5,8 @@ Changelog
 0.3dev
 ------
 
-- no changes yet
+- Introduce ``IShippingItem`` interface
+  [rnix]
 
 
 0.2

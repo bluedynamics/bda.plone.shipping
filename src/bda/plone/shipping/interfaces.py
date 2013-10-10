@@ -24,7 +24,14 @@ class IShipping(Interface):
     
     def calculate(self, items):
         """Calculate shipping costs.
-        
+
         @param items: items to calculate shipping costs.
         @return: shipping costs as float.
         """
+
+
+class IShippingItem(Interface):
+    """Provide shipping information for item.
+    """
+
+    weight = Attribute(u"Weight of shipping item. ``None`` means no weight")
