@@ -5,19 +5,22 @@ Changelog
 0.3dev
 ------
 
-- Introduce ``IShippingItem`` interface
+- Introduce ``IItemDelivery`` interface and corresponding base implementation.
+  [rnix]
+
+- Introduce ``IShippingItem`` interface.
   [rnix]
 
 
 0.2
 ---
 
-- Add tests
+- Add tests.
   [thet]
 
 
 0.1
 ---
 
-- initial work
+- initial work.
   [rnix]

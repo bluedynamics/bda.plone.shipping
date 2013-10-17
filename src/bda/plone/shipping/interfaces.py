@@ -34,4 +34,12 @@ class IShippingItem(Interface):
     """Provide shipping information for item.
     """
 
-    weight = Attribute(u"Weight of shipping item. ``None`` means no weight")
+    weight = Attribute(u"Weight of shipping item. ``None`` means no weight.")
+
+
+class IItemDelivery(Interface):
+    """Delivery information for item.
+    """
+
+    delivery_duration = Attribute(u"Duration in which item can be delivered "
+                                  u"as string.")

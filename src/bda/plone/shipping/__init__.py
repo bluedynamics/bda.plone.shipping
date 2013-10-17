@@ -8,30 +8,33 @@ from zope.component import (
     getAdapters,
 )
 from zope.i18nmessageid import MessageFactory
-from .interfaces import IShipping
+from .interfaces import (
+    IShipping,
+    IItemDelivery,
+)
 
 
 _ = MessageFactory('bda.plone.shipping')
 
 
 class Shippings(object):
-    
+
     def __init__(self, context):
         self.context = context
-    
+
     def get(self, name):
         return getAdapter(self.context, IShipping, name=name)
-    
+
     @property
     def shippings(self):
         adapters = getAdapters((self.context,), IShipping)
         return [_[1] for _ in adapters]
-    
+
     @property
     def vocab(self):
         adapters = getAdapters((self.context,), IShipping)
         return [(_[0], _[1].label) for _ in adapters if _[1].available]
-    
+
     @property
     def default(self):
         adapters = getAdapters((self.context,), IShipping)
@@ -49,13 +52,13 @@ class Shipping(object):
     label = None
     available = False
     default = False
-    
+
     def __init__(self, context):
         self.context = context
-    
+
     def calculate(self, items):
         """Calculate shipping costs.
-        
+
         @param items: list returned by 'bda.plone.cart.extractitems()'
         """
         raise NotImplementedError(u"Abstract ``Shipping`` does not implement "
@@ -69,3 +72,12 @@ class FlatRate(Shipping):
     label = _('flat_rate', 'Flat Rate')
     available = True
     default = True
+
+
+@implementer(IItemDelivery)
+@adapter(Interface)
+class NullItemDelivery(object):
+    delivery_duration = None
+
+    def __init__(self, context):
+        self.context = context
