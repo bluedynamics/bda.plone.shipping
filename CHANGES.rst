@@ -2,8 +2,8 @@
 Changelog
 =========
 
-0.3dev
-------
+0.3
+---
 
 - Introduce ``IItemDelivery`` interface and corresponding base implementation.
   [rnix]
