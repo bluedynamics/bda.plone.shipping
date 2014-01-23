@@ -1,17 +1,11 @@
-from zope.interface import (
-    implementer,
-    Interface,
-)
-from zope.component import (
-    adapter,
-    getAdapter,
-    getAdapters,
-)
+from zope.interface import implementer
+from zope.interface import Interface
+from zope.component import adapter
+from zope.component import getAdapter
+from zope.component import getAdapters
 from zope.i18nmessageid import MessageFactory
-from .interfaces import (
-    IShipping,
-    IItemDelivery,
-)
+from .interfaces import IShipping
+from .interfaces import IItemDelivery
 
 
 _ = MessageFactory('bda.plone.shipping')

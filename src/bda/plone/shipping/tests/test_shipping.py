@@ -1,11 +1,10 @@
 import unittest2 as unittest
-from bda.plone.shipping.tests import (
-    Shipping_INTEGRATION_TESTING,
-    set_browserlayer,
-)
-from bda.plone.shipping import FlatRate, Shipping
 from zope.component import provideAdapter
 from zope.interface import Interface
+from bda.plone.shipping import FlatRate
+from bda.plone.shipping import Shipping
+from bda.plone.shipping.tests import Shipping_INTEGRATION_TESTING
+from bda.plone.shipping.tests import set_browserlayer
 from bda.plone.shipping.interfaces import IShipping
 
 
