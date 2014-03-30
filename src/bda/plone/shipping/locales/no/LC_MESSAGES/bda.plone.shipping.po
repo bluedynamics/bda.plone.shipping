@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BDA shipping no\n"
-"POT-Creation-Date: 2013-07-22 16:13+0000\n"
+"POT-Creation-Date: 2014-03-30 13:28+0000\n"
 "PO-Revision-Date: 2013-06-10 11:24+0100\n"
 "Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
 "Language-Team: LANGUAGE <espen@medialog.no>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 #. Default: "Flat Rate"
-#: ./__init__.py:69
+#: ./__init__.py:66
 msgid "flat_rate"
 msgstr "Standard"
 

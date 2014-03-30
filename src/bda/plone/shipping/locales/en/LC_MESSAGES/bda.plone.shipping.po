@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.shipping\n"
-"POT-Creation-Date: 2013-07-22 16:13+0000\n"
+"POT-Creation-Date: 2014-03-30 13:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Peter Holzer <hpeter@agitator.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Domain: bda.plone.shipping\n"
 
 #. Default: "Flat Rate"
-#: ./__init__.py:69
+#: ./__init__.py:66
 msgid "flat_rate"
 msgstr ""
 
