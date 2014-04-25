@@ -2,6 +2,13 @@
 Changelog
 =========
 
+0.4dev
+------
+
+- Remove ``FlatRate`` shipping.
+  [rnix]
+
+
 0.3
 ---
 

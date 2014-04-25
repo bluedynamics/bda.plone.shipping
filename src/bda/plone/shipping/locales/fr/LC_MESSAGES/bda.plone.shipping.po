@@ -13,9 +13,3 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: bda.plone.shipping\n"
-
-#. Default: "Flat Rate"
-#: ./__init__.py:66
-msgid "flat_rate"
-msgstr "Forfait"
-

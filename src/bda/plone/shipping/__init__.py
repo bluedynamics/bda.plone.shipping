@@ -59,15 +59,6 @@ class Shipping(object):
                                   u"``calculate``")
 
 
-class FlatRate(Shipping):
-    """Abstract flat rate shipping.
-    """
-    sid = 'flat_rate'
-    label = _('flat_rate', 'Flat Rate')
-    available = True
-    default = True
-
-
 @implementer(IItemDelivery)
 @adapter(Interface)
 class NullItemDelivery(object):
