@@ -37,7 +37,7 @@ class IShipping(Interface):
         """
 
     def calculate(items):
-        """Calculate shipping costs for items and return as float.
+        """Calculate shipping costs for items and return as Decimal.
 
         NOTE: This function is kept for B/C reasons and gets removed as of
         ``bda.plone.shipping`` 1.0.

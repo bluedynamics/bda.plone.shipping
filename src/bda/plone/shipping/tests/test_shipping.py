@@ -23,7 +23,7 @@ class MockShipping(Shipping):
 
     def calculate(self, items):
         # XXX: remove as of bda.plone.shipping 1.0
-        return 10.0
+        return Decimal(10)
 
 
 class TestShipping(unittest.TestCase):
@@ -46,4 +46,4 @@ class TestShipping(unittest.TestCase):
         self.assertEquals(mock.net([]), Decimal(10))
         self.assertEquals(mock.vat([]), Decimal(2))
         # XXX: remove as of bda.plone.shipping 1.0
-        self.assertEquals(mock.calculate([]), 10.0)
+        self.assertEquals(mock.calculate([]), Decimal(10))
