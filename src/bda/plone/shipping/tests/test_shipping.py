@@ -1,4 +1,5 @@
 import unittest2 as unittest
+from decimal import Decimal
 from zope.component import provideAdapter
 from zope.interface import Interface
 from bda.plone.shipping import Shipping
@@ -10,11 +11,19 @@ from bda.plone.shipping.interfaces import IShipping
 class MockShipping(Shipping):
     sid = 'mock_shipping'
     label = 'Mock Shipping'
+    description = 'Mock Shipping Description'
     available = True
     default = False
 
+    def net(self, items):
+        return Decimal(10)
+
+    def vat(self, items):
+        return Decimal(2)
+
     def calculate(self, items):
-        return 10
+        # XXX: remove as of bda.plone.shipping 1.0
+        return 10.0
 
 
 class TestShipping(unittest.TestCase):
@@ -31,6 +40,10 @@ class TestShipping(unittest.TestCase):
         mock = self.shipping
         self.assertEquals(mock.sid, "mock_shipping")
         self.assertEquals(mock.label, "Mock Shipping")
+        self.assertEquals(mock.description, "Mock Shipping Description")
         self.assertEquals(mock.available, True)
         self.assertEquals(mock.default, False)
-        self.assertEquals(mock.calculate([]), 10)
+        self.assertEquals(mock.net([]), Decimal(10))
+        self.assertEquals(mock.vat([]), Decimal(2))
+        # XXX: remove as of bda.plone.shipping 1.0
+        self.assertEquals(mock.calculate([]), 10.0)

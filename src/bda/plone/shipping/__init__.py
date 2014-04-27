@@ -44,17 +44,24 @@ class Shippings(object):
 class Shipping(object):
     sid = None
     label = None
+    description = None
     available = False
     default = False
 
     def __init__(self, context):
         self.context = context
 
-    def calculate(self, items):
-        """Calculate shipping costs.
+    def net(self, items):
+        raise NotImplementedError(u"Abstract ``Shipping`` does not implement "
+                                  u"``net``")
 
-        @param items: list returned by 'bda.plone.cart.extractitems()'
-        """
+    def vat(self, items):
+        raise NotImplementedError(u"Abstract ``Shipping`` does not implement "
+                                  u"``vat``")
+
+    def calculate(self, items):
+        #NOTE: This function is kept for B/C reasons and gets removed as of
+        #``bda.plone.shipping`` 1.0.
         raise NotImplementedError(u"Abstract ``Shipping`` does not implement "
                                   u"``calculate``")
 

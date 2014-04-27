@@ -5,6 +5,13 @@ Changelog
 0.4dev
 ------
 
+- Deprecate ``IShipping.calculate``. Use ``IShipping.net`` and
+  ``IShipping.vat`` instead.
+  [rnix]
+
+- Add ``description`` attribute to ``IShipping`` interface.
+  [rnix]
+
 - Remove ``FlatRate`` shipping.
   [rnix]
 

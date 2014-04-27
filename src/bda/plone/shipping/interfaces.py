@@ -12,19 +12,38 @@ class IShipping(Interface):
     """
     sid = Attribute(u"Unique shipping method id. Shipping method adapter is "
                     u"also registered under this name.")
-    
+
     label = Attribute(u"Shipping method label")
-    
+
+    description = Attribute(u"Shipping method description")
+
     available = Attribute(u"Flag whether shipping method is available in "
                           u"recent payment cycle.")
-    
-    default = Attribute(u"Flag whether this shipping method is default.")
-    
-    def calculate(self, items):
-        """Calculate shipping costs.
 
-        @param items: items to calculate shipping costs.
-        @return: shipping costs as float.
+    default = Attribute(u"Flag whether this shipping method is default.")
+
+    def net(items):
+        """Calculate shipping costs net value for items and return as Decimal.
+
+        :param items: items in the cart
+        :param type: list of 3-tuples containing ``(uid, count, comment)``
+        """
+
+    def vat(items):
+        """Calculate shipping costs vat value for items and return as Decimal.
+
+        :param items: items in the cart
+        :param type: list of 3-tuples containing ``(uid, count, comment)``
+        """
+
+    def calculate(items):
+        """Calculate shipping costs for items and return as float.
+
+        NOTE: This function is kept for B/C reasons and gets removed as of
+        ``bda.plone.shipping`` 1.0.
+
+        :param items: items in the cart
+        :param type: list of 3-tuples containing ``(uid, count, comment)``
         """
 
 
