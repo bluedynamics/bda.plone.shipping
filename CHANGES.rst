@@ -5,6 +5,14 @@ Changelog
 0.4dev
 ------
 
+- Implement ``available`` and ``default`` properties on
+  ``bda.plone.shipping.Shipping`` using settings from
+  ``bda.plone.shipping.interfaces.IShippingSettings``.
+  [rnix]
+
+- Introduce ``bda.plone.payment.interfaces.IShippingSettings``.
+  [rnix]
+
 - Deprecate ``IShipping.calculate``. Use ``IShipping.net`` and
   ``IShipping.vat`` instead.
   [rnix]

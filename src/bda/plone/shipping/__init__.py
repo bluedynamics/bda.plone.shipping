@@ -4,8 +4,9 @@ from zope.component import adapter
 from zope.component import getAdapter
 from zope.component import getAdapters
 from zope.i18nmessageid import MessageFactory
-from .interfaces import IShipping
-from .interfaces import IItemDelivery
+from bda.plone.shipping.interfaces import IShipping
+from bda.plone.shipping.interfaces import IItemDelivery
+from bda.plone.shipping.interfaces import IShippingSettings
 
 
 _ = MessageFactory('bda.plone.shipping')
@@ -45,11 +46,19 @@ class Shipping(object):
     sid = None
     label = None
     description = None
-    available = False
-    default = False
 
     def __init__(self, context):
         self.context = context
+
+    @property
+    def available(self):
+        settings = IShippingSettings(self.context)
+        return self.sid in settings.available
+
+    @property
+    def default(self):
+        settings = IShippingSettings(self.context)
+        return self.sid == settings.default
 
     def net(self, items):
         raise NotImplementedError(u"Abstract ``Shipping`` does not implement "

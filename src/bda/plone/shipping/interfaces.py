@@ -7,6 +7,14 @@ class IShippingExtensionLayer(Interface):
     """
 
 
+class IShippingSettings(Interface):
+    """Shipping availability and default settings.
+    """
+    available = Attribute(u"List of available shipping method ids")
+
+    default = Attribute(u"Default shipping method")
+
+
 class IShipping(Interface):
     """Single shipping method.
     """
