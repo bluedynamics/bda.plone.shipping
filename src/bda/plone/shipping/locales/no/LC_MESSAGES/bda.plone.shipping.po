@@ -15,3 +15,4 @@ msgstr ""
 "Domain: DOMAIN\n"
 "Language: nb_NO\n"
 "X-Generator: Poedit 1.5.5\n"
+
