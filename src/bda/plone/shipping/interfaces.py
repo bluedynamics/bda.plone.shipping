@@ -59,6 +59,9 @@ class IShippingItem(Interface):
     """Provide shipping information for item.
     """
 
+    shippable = Attribute(u"Flag whether item is shippable, i.e. downloads "
+                          u"are not.")
+
     weight = Attribute(u"Weight of shipping item. ``None`` means no weight.")
 
 

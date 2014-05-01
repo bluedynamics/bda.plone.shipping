@@ -5,6 +5,9 @@ Changelog
 0.4dev
 ------
 
+- Add ``IShippingItem.shippable`` Attribute.
+  [rnix]
+
 - Implement ``available`` and ``default`` properties on
   ``bda.plone.shipping.Shipping`` using settings from
   ``bda.plone.shipping.interfaces.IShippingSettings``.
