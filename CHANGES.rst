@@ -2,8 +2,8 @@
 Changelog
 =========
 
-0.4dev
-------
+0.4
+---
 
 - Add ``IShippingItem.shippable`` Attribute.
   [rnix]
