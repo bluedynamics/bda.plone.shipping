@@ -2,11 +2,11 @@
 Changelog
 =========
 
-0.5.dev0
+0.6.dev0
 --------
 
-- No changes yet.
-  [rnix]
+- Plone 5 update
+  [agitator]
 
 
 0.4
