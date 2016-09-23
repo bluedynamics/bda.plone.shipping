@@ -1,12 +1,12 @@
-from zope.interface import implementer
-from zope.interface import Interface
+from bda.plone.shipping.interfaces import IItemDelivery
+from bda.plone.shipping.interfaces import IShipping
+from bda.plone.shipping.interfaces import IShippingSettings
 from zope.component import adapter
 from zope.component import getAdapter
 from zope.component import getAdapters
 from zope.i18nmessageid import MessageFactory
-from bda.plone.shipping.interfaces import IShipping
-from bda.plone.shipping.interfaces import IItemDelivery
-from bda.plone.shipping.interfaces import IShippingSettings
+from zope.interface import implementer
+from zope.interface import Interface
 
 
 _ = MessageFactory('bda.plone.shipping')
