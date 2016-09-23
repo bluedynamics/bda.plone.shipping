@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from bda.plone.shipping import Shipping
 from bda.plone.shipping.interfaces import IShipping
 from bda.plone.shipping.tests import set_browserlayer
