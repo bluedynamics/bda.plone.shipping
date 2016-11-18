@@ -5,6 +5,8 @@ Changelog
 0.6.dev0
 --------
 
+- Add ``IShippingItem.free_shipping`` flag.
+
 - Plone 5 update
   [agitator]
 

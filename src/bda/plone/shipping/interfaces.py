@@ -59,16 +59,16 @@ class IShipping(Interface):
 class IShippingItem(Interface):
     """Provide shipping information for item.
     """
-
     shippable = Attribute(u"Flag whether item is shippable, i.e. downloads "
                           u"are not.")
 
     weight = Attribute(u"Weight of shipping item. ``None`` means no weight.")
 
+    free_shipping = Attribute(u"Flag whether shipping of this item is free.")
+
 
 class IItemDelivery(Interface):
     """Delivery information for item.
     """
-
     delivery_duration = Attribute(u"Duration in which item can be delivered "
                                   u"as string.")
