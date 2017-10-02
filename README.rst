@@ -16,7 +16,7 @@ instructions.
 Providing a shipping method
 ===========================
 
-XXX
+XXX: Write me
 
 
 Create translations
