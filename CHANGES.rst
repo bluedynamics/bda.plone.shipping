@@ -2,8 +2,8 @@
 Changelog
 =========
 
-0.6.dev0
---------
+1.0a1 (unreleased)
+------------------
 
 - Add ``IShippingItem.free_shipping`` flag.
   [rnix]
