@@ -7,7 +7,7 @@ from decimal import Decimal
 from zope.component import provideAdapter
 from zope.interface import Interface
 
-import unittest2 as unittest
+import unittest
 
 
 class MockShipping(Shipping):
