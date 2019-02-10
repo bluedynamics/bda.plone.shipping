@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.shipping\n"
-"POT-Creation-Date: 2014-03-30 13:28+0000\n"
+"POT-Creation-Date: 2019-02-10 13:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Peter Holzer <hpeter@agitator.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,3 +14,6 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: bda.plone.shipping\n"
 
+#: ./profiles.zcml:12
+msgid "bda.plone.shipping"
+msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.shipping\n"
-"POT-Creation-Date: 2014-03-30 13:28+0000\n"
+"POT-Creation-Date: 2019-02-10 13:46+0000\n"
 "PO-Revision-Date: 2013-06-12 14:37+0100\n"
 "Last-Translator: Peter Holzer <peter.holzer@agitator.com>\n"
 "Language-Team: \n"
@@ -15,3 +15,6 @@ msgstr ""
 "Domain: bda.plone.shipping\n"
 "X-Is-Fallback-For: it-ch it-it\n"
 
+#: ./profiles.zcml:12
+msgid "bda.plone.shipping"
+msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BDA shipping no\n"
-"POT-Creation-Date: 2014-03-30 13:28+0000\n"
+"POT-Creation-Date: 2019-02-10 13:46+0000\n"
 "PO-Revision-Date: 2013-06-10 11:24+0100\n"
 "Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
 "Language-Team: LANGUAGE <espen@medialog.no>\n"
@@ -16,3 +16,6 @@ msgstr ""
 "Language: nb_NO\n"
 "X-Generator: Poedit 1.5.5\n"
 
+#: ./profiles.zcml:12
+msgid "bda.plone.shipping"
+msgstr ""
