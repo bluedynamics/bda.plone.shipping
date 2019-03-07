@@ -70,8 +70,8 @@ class Shipping(object):
                                   u"``vat``")
 
     def calculate(self, items):
-        #NOTE: This function is kept for B/C reasons and gets removed as of
-        #``bda.plone.shipping`` 1.0.
+        # NOTE: This function is kept for B/C reasons and gets removed as of
+        # ``bda.plone.shipping`` 1.0.
         raise NotImplementedError(u"Abstract ``Shipping`` does not implement "
                                   u"``calculate``")
 
