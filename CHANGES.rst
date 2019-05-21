@@ -5,6 +5,10 @@ Changelog
 2.0.dev0 (unreleased)
 ---------------------
 
+- Move whole shipping to bda.plone.cart. 
+  Here are only bbb imports.
+  [jensens]
+
 - Removed all superfluos stuff.
   [jensens]
 

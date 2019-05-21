@@ -16,10 +16,6 @@ setup(
     description=shortdesc,
     long_description=longdesc,
     classifiers=[
-        'Framework :: Plone',
-        'Framework :: Plone :: Addon',
-        'Framework :: Plone :: 5.1',
-        'Framework :: Plone :: 5.2',
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: GNU General Public License (GPL)',
@@ -34,13 +30,10 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'zope.component',
-        'zope.interface',
-        'zope.i18nmessageid',
+        'zope.deferredimport',
     ],
     extras_require={
         'test': [
-            'plone.app.testing',
         ]
     },
     entry_points="""
