@@ -23,9 +23,6 @@ class ShippingLayer(PloneSandboxLayer):
         self.loadZCML(package=bda.plone.shipping,
                       context=configurationContext)
 
-    def setUpPloneSite(self, portal):
-        self.applyProfile(portal, 'bda.plone.shipping:default')
-
     def tearDownZope(self, app):
         pass
 

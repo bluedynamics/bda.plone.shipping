@@ -17,6 +17,7 @@ setup(
     long_description=longdesc,
     classifiers=[
         'Framework :: Plone',
+        'Framework :: Plone :: Addon',
         'Framework :: Plone :: 5.1',
         'Framework :: Plone :: 5.2',
         'Programming Language :: Python',
@@ -33,7 +34,9 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'Plone',
+        'zope.component',
+        'zope.interface',
+        'zope.i18nmessageid',
     ],
     extras_require={
         'test': [

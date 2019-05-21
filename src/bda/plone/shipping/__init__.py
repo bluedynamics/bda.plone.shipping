@@ -22,18 +22,24 @@ class Shippings(object):
         return getAdapter(self.context, IShipping, name=name)
 
     @property
+    def _adapters(self):
+        return getAdapters((self.context,), IShipping)
+
+    @property
     def shippings(self):
-        adapters = getAdapters((self.context,), IShipping)
-        return [_[1] for _ in adapters]
+        # XXX translating the adapter name is pointless
+        return [_[1] for _ in self._adapters]
 
     @property
     def vocab(self):
-        adapters = getAdapters((self.context,), IShipping)
-        return [(_[0], _[1].label) for _ in adapters if _[1].available]
+        # XXX translating the adapter name is pointless
+        # the label should be delivered already as i18n messageid,
+        # otherwise it is pointless
+        return [(_[0], _[1].label) for _ in self._adapters if _[1].available]
 
     @property
     def default(self):
-        adapters = getAdapters((self.context,), IShipping)
+        adapters = self._adapters
         for name, shipping in adapters:
             if shipping.default:
                 return name
@@ -52,14 +58,16 @@ class Shipping(object):
         self.context = context
 
     @property
+    def _settings(self):
+        return IShippingSettings(self.context)
+
+    @property
     def available(self):
-        settings = IShippingSettings(self.context)
-        return self.sid in settings.available
+        return self.sid in self._settings.available
 
     @property
     def default(self):
-        settings = IShippingSettings(self.context)
-        return self.sid == settings.default
+        return self.sid == self._settings.default
 
     def net(self, items):
         raise NotImplementedError(u"Abstract ``Shipping`` does not implement "

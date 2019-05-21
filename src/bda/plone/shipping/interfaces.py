@@ -6,6 +6,7 @@ from zope.interface import Interface
 class IShippingExtensionLayer(Interface):
     """Browser layer for bda.plone.shipping.
     """
+    # BBB, only in use for old sites.
 
 
 class IShippingSettings(Interface):

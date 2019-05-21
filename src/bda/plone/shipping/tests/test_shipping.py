@@ -5,7 +5,6 @@ from bda.plone.shipping.tests import set_browserlayer
 from bda.plone.shipping.tests import Shipping_INTEGRATION_TESTING
 from decimal import Decimal
 from zope.component import provideAdapter
-from zope.interface import Interface
 
 import unittest
 
