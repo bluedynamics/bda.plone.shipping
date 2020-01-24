@@ -1,5 +1,15 @@
-<configure xmlns="http://namespaces.zope.org/zope">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
 
 <!-- keep empty, moved to bda.plone.cart, for BBB only -->
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="bda.plone.shipping (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the bda.plone.shipping add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
 
 </configure>
